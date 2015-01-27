@@ -1,15 +1,53 @@
-# Site settings
-title: tomhoover [dot] net
-author: Tom Hoover
-email: tom@tomhoover.net
-description: > # this means to ignore newlines until "baseurl:"
- tomhoover.net...my own little speedbump on the information superhighway.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://tomhoover.net" # the base hostname & protocol for your site
-twitter_username: tom_hoover
-github_username:  tomhoover
+# Site wide configuration
 
-# Build settings
-markdown: kramdown
-permalink: /:title/
-exclude: ['README.md', 'Gemfile', 'Gemfile.lock']
+title: tomhoover [dot] net
+locale: en_US
+description: ...my own little speedbump on the information superhighway
+logo: th.png
+search: true
+#url: http://localhost:4000
+
+
+# Jekyll configuration
+
+permalink:   /:title/
+markdown:    kramdown
+highlighter: pygments
+sass:
+  sass_dir: _sass
+  style: compressed
+gems:
+  - jekyll-sitemap
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..2
+  use_coderay: false
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md", "vendor"]
+
+
+# Site owner
+owner:
+  name: Tom Hoover
+  avatar: bio-photo-alt.jpg
+  email: tom@tomhoover.net
+  disqus-shortname:
+  twitter: tom_hoover
+  facebook: tomhoover
+  github: tomhoover
+  stackexchange: http://stackoverflow.com/users/4485023/tom-hoover
+  linkedin: thomaschoover
+  instagram: tomhoover
+  flickr: tomhoover
+  tumblr: tomhoover
+  google:
+    plus: TomHoover_net
+    analytics: 
+    verify:
+    ad-client:
+    ad-slot: 
+  bing-verify:
